@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/yj_baise"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="地块名"
+                />
+
+            <TextView
+                android:id="@+id/ih_tv_massifName"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="middle"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="#4A5175"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="投保面积(亩)"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/ih_tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="600.00"
+                android:textColor="@color/main"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ih_iv_choose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/znyg_check" />
+    </LinearLayout>
+</LinearLayout>

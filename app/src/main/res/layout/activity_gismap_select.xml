@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white3"
+    tools:context=".FarmerInfo.FarmerInfoActivity">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/aits_2485F1"
+        android:orientation="horizontal"></LinearLayout>-->
+
+    <LinearLayout
+        android:background="#506DF5"
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@mipmap/back_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="行政区域选择"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/quyu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/yj_baise"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/gismap_lin_province"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="省"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gismap_tv_province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/dz_right" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/gismap_view_province"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white3" />
+        <LinearLayout
+            android:id="@+id/gismap_lin_city"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="市"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gismap_tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/dz_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white3" />
+
+        <LinearLayout
+            android:id="@+id/gismap_lin_county"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="县"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gismap_tv_county"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/dz_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white3" />
+
+        <LinearLayout
+            android:id="@+id/gismap_lin_town"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="乡"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gismap_tv_town"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/dz_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white3" />
+
+        <LinearLayout
+            android:id="@+id/gismap_lin_village"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="村"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gismap_tv_village"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/dz_right" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:background="@drawable/yj_lanses"
+        android:id="@+id/gismap_btn_sure"
+        android:layout_width="80dp"
+        android:layout_height="40dp"/>
+</RelativeLayout>

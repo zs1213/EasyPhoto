@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#506DF5"
+    android:orientation="vertical"
+    tools:context=".history.HistoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@mipmap/back_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="历史任务"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/his_tv_allSub"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="全部提交"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/yj_baises"
+        android:orientation="vertical">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/yj_menu"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/yj_baise"
+                android:id="@+id/his_lin_all"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+
+                    android:id="@+id/his_tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="#0de67d"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/his_lin_nodraw"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/his_tv_nodraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="未标绘完成"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/his_lin_nosign"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/his_tv_nosign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="未签字"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/his_lin_nosubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/his_tv_nosubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="已签字"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:id="@+id/his_lin_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/his_tv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="已提交"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/his_lv_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:divider="#00000000"
+            android:dividerHeight="5dp"></ListView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

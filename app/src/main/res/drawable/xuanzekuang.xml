@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#00000000" />
+    <!-- 边框的颜色 ：不能和窗口背景色一样-->
+    <stroke
+        android:width="2dp"
+        android:color="#506DF5" />
+    <corners
+        android:bottomLeftRadius="14dp"
+        android:bottomRightRadius="14dp"
+        android:topLeftRadius="14dp"
+        android:topRightRadius="14dp"
+        />
+</shape>

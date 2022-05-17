@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aits_EEEEEE"
+    android:orientation="vertical"
+    tools:context=".calculation.CalculationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/aits_2485F1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="goBack"
+            android:src="@mipmap/titlebar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="地块列表"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_weight="1"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/transparent"
+        android:id="@+id/dklist_lv_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dklist_btn_allSelect"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse"
+            android:text="全选"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/dklist_btn_unSelect"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse"
+            android:text="取消"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/dklist_btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse"
+            android:text="提交"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

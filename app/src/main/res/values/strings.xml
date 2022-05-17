@@ -1,0 +1,33 @@
+<resources>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <!--<string name="app_name">中农易拍-大家</string>-->
+    <!--<string name="app_name">中农易拍-平安</string>-->
+    <!--<string name="app_name">中农易拍-安华</string>-->
+    <!--<string name="app_name">中农易拍学习版</string>-->
+    <!--<string name="app_name">中农易拍</string>-->
+    <string name="app_names">众泰作业通</string>
+    <string name="dir">/easyPhoto</string>
+    <string name="db_dir">/database</string>
+    <!--本地-->
+    <!--<string name="aits_host">http://192.168.1.118:8080/</string>-->
+    <!--学习-->
+    <!--<string name="aits_host">http://111.26.161.196:5000/</string>-->
+    <!--正式-->
+    <string name="aits_host">http://111.26.161.204:3205/</string>
+
+    <!--第三方-->
+    <string name="comName">第三方</string>
+    <!--学习-->
+    <!--<string name="comName">中农</string>-->
+    <!--大家-->
+    <!--<string name="comName">大家</string>-->
+    <!--安华-->
+    <!--<string name="comName">安华</string>-->
+    <!--平安-->
+    <!--<string name="comName">平安</string>-->
+    <string name="aits_common">aitsServer/commonServlet</string>
+    <string name="aits_common_file">aitsServer/commonFileServlet</string>
+    <string name="aits_apk_download">aitsServer/app/</string>
+    <string name="app_dir">/app</string>
+    <string name="app_code">easyPhoto</string>
+</resources>

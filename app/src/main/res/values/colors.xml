@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white2">#dddddd</color>
+    <color name="white3">#EEEEFF</color>
+    <item name="linecolor" type="drawable">#ffced3ce</item>
+    <color name="transparent_background">#70000000</color>
+    <color name="blue">#ff00a2dc</color>
+    <color name="white">#ffffffff</color>
+    <color name="silver">#ff444444</color>
+    <color name="silver1">#ffcccaca</color>
+    <color name="main_view_text_pressed">#ff3f4144</color>
+    <color name="main_view_text_normal">#ffaaaaab</color>
+    <color name="black">#ff000000</color>
+    <color name="gainsboro">#ffcecece</color>
+    <color name="gray_blue">#DDDDFF</color>
+    <color name="font_color">#ff633516</color>
+    <color name="p_text1">#ff727272</color>
+    <color name="p_text2">#ff343434</color>
+    <color name="chat_text">#ff333333</color>
+    <color name="trans">#00000000</color>
+    <color name="red">#ff0000</color>
+    <color name="header">#58567D</color>
+    <color name="gray">#ADADAD</color>
+    <color name="bluebutton">#5CA9EA</color>
+    <color name="bluebutton2">#4A87BB</color>
+    <!-- listview 间隔线颜色 -->
+    <color name="list_septal_line">#E2E4EB</color>
+    <color name="list_item_blue">#2681DC</color>
+    <color name="list_item_title">#000000</color>
+    <color name="list_item_text">#434B58</color>
+    <color name="click_more">#A2AAB9</color>
+    <color name="listitem_black">#ff000000</color>
+    <color name="translucent">#00000000</color>
+    <color name="log_read">#89bb88</color>
+    <color name="log_submit">#828df1</color>
+    <!-- aits  用到的字体颜色 -->
+    <color name="aits_2485F1">#2485F1</color>
+    <!-- tabbar 选中字体颜色 -->
+    <color name="aits_AAAAAA">#AAAAAA</color>
+    <!-- tabbar 未选中字体颜色 -->
+    <color name="aits_F5F5F5">#F5F5F5</color>
+    <!-- 背景灰 -->
+    <color name="aits_3283EB">#3283EB</color>
+    <!-- 蓝色  标题背景等 -->
+    <color name="aits_F2F2F2">#F2F2F2</color>
+    <color name="aits_FFFFFF">#FFFFFF</color>
+    <!-- 白色 -->
+    <color name="aits_999999">#999999</color>
+    <!-- 冬青黑 -->
+    <color name="aits_DDDDDD">#DDDDDD</color>
+    <!-- 灰色 用于分割线 -->
+    <color name="aits_22C064">#22C064</color>
+    <!-- 绿色 -->
+    <color name="aits_444444">#444444</color>
+    <!-- 深于冬青黑 -->
+    <color name="aits_4ED668">#4ED668</color>
+    <!-- 我的投资绿色 -->
+    <color name="aits_3283EC">#3283EC</color>
+    <!-- 我的投资中蓝色 -->
+    <color name="aits_878787">#878787</color>
+    <!-- 我的投资中投资的单位元 -->
+    <color name="aits_969696">#969696</color>
+    <!-- 我的投资中投资的年化利率 -->
+    <color name="aits_F25246">#F25246</color>
+    <!-- 红色 -->
+    <color name="aits_f7554a">#f7554a</color>
+    <!-- 红色 -->
+    <color name="aits_000000">#000000</color>
+    <!-- 黑色 -->
+    <color name="aits_D1D5D8">#D1D5D8</color>
+    <!-- 进度圈背景色 -->
+    <color name="aits_CCDFAA">#CCDFAA</color>
+    <!-- 账户余额标签颜色 -->
+    <color name="aits_005BAD">#005BAD</color>
+    <!-- 启动介绍页的背景色 -->
+    <color name="aits_573D00">#573D00</color>
+    <!-- 启动介绍页的开始赚钱按钮的颜色 -->
+    <color name="aits_545454">#545454</color>
+    <!-- 我的资金标签颜色 -->
+    <color name="aits_868686">#868686</color>
+    <!-- 我的资金标签money颜色 -->
+    <color name="aits_FF5C26">#FF5C26</color>
+    <!-- 橘黄色 -->
+    <color name="aits_FFFF99">#FFFF99</color>
+    <!-- 累计收益颜色 -->
+    <color name="aits_EEEEEE">#EEEEEE</color>
+    <color name="aits_background_tab_pressed">#6633B5E5</color>
+    <color name="blackFilterText">#999</color>
+    <color name="blueFilterText">#3283ec</color>
+    <color name="aits_666666">#666666</color>
+    <color name="aist_thumbColor">#66aaaaaa</color>
+    <!-- 客户管理 -->
+    <color name="aits_888888">#888888</color>
+    <color name="aits_BBBBBB">#BBBBBB</color>
+    <color name="aits_66000000">#66000000</color>
+    <color name="aits_555555">#555555</color>
+    <color name="aits_4EC64B">#4EC64B</color>
+    <color name="aits_FF0000">#FF0000</color>
+
+    <!-- setting -->
+    <color name="setting_c7c7cb">#c7c7cb</color>
+    <color name="setting_f5f5f5">#f5f5f5</color>
+    <color name="setting_ffffff">#ffffff</color>
+    <color name="setting_999999">#999999</color>
+
+    <!-- contact -->
+    <color name="contact_868686">#868686</color>
+    <color name="contact_525252">#525252</color>
+    <color name="contact_e6e6fa">#e6e6fa</color>
+    <color name="contact_999999">#999999</color>
+    <color name="contact_444444">#444444</color>
+    <color name="contact_f5f5f5">#f5f5f5</color>
+    <color name="contact_ffffffff">#ffffffff</color>
+    <color name="contact_2485f1">#2485f1</color>
+
+    <color name="aits_2486f1">#2486f1</color>
+    <!-- LEAVE -->
+    <color name="leave_4DC64A">#4DC64A</color>
+    <color name="leave_FE4A65">#FE4A65</color>
+    <color name="leave_2485F1">#2485F1</color>
+    <color name="aits_42BD41">#42BD41</color>
+    <color name="aits_CCCCCC">#CCCCCC</color>
+    <color name="aits_BABABA">#BABABA</color>
+    <color name="aits_FFA200">#FFA200</color>
+    <color name="aits_1387FF">#1387FF</color>
+    <color name="aits_00000000">#00000000</color>
+    <color name="aits_00ffffff">#00ffffff</color>
+    <color name="aits_50ffffff">#50ffffff</color>
+    <color name="aits_e00168CF">#e00168CF</color>
+    <color name="aits_line_border">#C7C7C7</color>
+
+    <color name="watermark">#FF33FF</color>
+    <color name="loginappname">#CDF0FF</color>
+    <color name="aits_153461">#153461</color>
+    <color name="aits_3E444F">#3E444F</color>
+    <color name="aits_009DD9">#009DD9</color>
+    <color name="aits_B5B5B5">#B5B5B5</color>
+    <color name="darkRed">#702216</color>
+    <color name="lightGray">#323232</color>
+    <color name="deepGray">#8B8B8B</color>
+    <color name="ocbg">#237EAD</color>
+    <color name="main">#396dfa</color>
+    <color name="green">#00ff00</color>
+</resources>

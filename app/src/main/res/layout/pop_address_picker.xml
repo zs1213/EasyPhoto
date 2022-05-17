@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+<View
+    android:background="#10000000"
+    android:id="@+id/apvDismiss"
+    android:layout_weight="1"
+    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    />
+    <com.example.lml.easyphoto.addressSelect.AddressPickerView
+        android:background="#ffffff"
+        android:id="@+id/apvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        >
+
+    </com.example.lml.easyphoto.addressSelect.AddressPickerView>
+
+</LinearLayout>

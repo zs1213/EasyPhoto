@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yj_baisesbiank"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shugang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="保单号："
+            android:textColor="#A0A3B1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/hs_tv_proNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="#A0A3B1"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:background="#F1F4F7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hs_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="陈百万"
+                android:textColor="#4A5175"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/hs_tv_createTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="投保面积(亩)"
+                android:textColor="#9498AB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/hs_tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600.00"
+                android:textColor="@color/main"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/hs_iv_right"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/item_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:background="@drawable/yj_zhuangtai"
+            android:gravity="center"
+            android:id="@+id/hs_tv_state"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:textSize="12sp" />
+        <TextView
+            android:layout_marginLeft="100dp"
+            android:id="@+id/hs_tv_massif"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:text="查看地块"
+            android:background="@drawable/yj_lanses"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yj_baise"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hs_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="bottom"
+                android:text="陈百万"
+                android:textColor="@color/main"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保  单  号:"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/hs_tv_proNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标绘面积："
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/hs_tv_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="600.00" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:id="@+id/hs_tv_createTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/hs_iv_right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/right" />
+</LinearLayout>-->

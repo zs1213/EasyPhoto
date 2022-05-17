@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#506DF5"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@drawable/yj_baisesess"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/znyg_left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/finish_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="地块比对"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goHome">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/gohome" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/hhh"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@drawable/yj_baise"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@mipmap/duia"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已标绘（亩）"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/finish_tv_havePlot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#464E73"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/yj_baise"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@mipmap/jiana"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未标绘（亩）"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/finish_tv_noPlot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="#464E73"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/yj_baise"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="15dp"
+                android:background="@color/main" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="标绘地块列表"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/finish_lv_massif"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:divider="@color/white"
+            android:dividerHeight="5dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="15dp"
+                android:background="@color/main" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="分户清单列表"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <ListView
+            android:divider="@color/white3"
+            android:id="@+id/finish_lv_holds"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:dividerHeight="2dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/finish_btn_updata"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse_xiugai"
+            android:text="继续标绘"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/finish_btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse_shanchu"
+            android:text="删除"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/finish_btn_next"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse_next"
+            android:text="下一步"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>
+
+</LinearLayout>

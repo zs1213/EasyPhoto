@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!-- 任务照 -->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/dl_rel_taskif"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_taskIf"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="任  务  照"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_taskIf"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_taskIf"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择任务照是否"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 初评符合 -->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/dl_rel_chuping"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_massifLevel"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="初评符合"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_chuping"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_massifLevel"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择初评符合"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 种植作物 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_crop"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="种植作物"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_crop"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_crop"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择种植作物"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 地块类型 -->
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/dl_rel_massifType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_massifType"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="类    别"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_massifType"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_massifType"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择类别"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 灾害类型 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="灾害类型"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_zaiType"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_type"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择灾害类型"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 灾害等级 -->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/dl_rel_zai"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_zai"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="灾害等级"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_zai"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_zai"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择灾害等级"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 土壤类型 -->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/dl_rel_soilType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_soilType"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="土壤类型"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/dl_edt_soilType"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_soilType"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择土壤类型"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/dl_rel_chanliang"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_chanliang"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="常年平均产量"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/dl_edt_chanliang"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_chanliang"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请填写常年平均产量"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+        <TextView
+            android:gravity="center"
+            android:text="(斤/亩)"
+            android:layout_width="60dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <!-- 损失程度 -->
+    <RelativeLayout
+        android:id="@+id/dl_rel_sunshi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_sunshi"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="损失程度"
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/dl_edt_sscd"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/tv_sunshi"
+            android:background="@color/white"
+            android:editable="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请选择损失程度"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="23dip"
+            android:background="@mipmap/xiala"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+<EditText
+    android:layout_margin="@dimen/padding_5"
+    android:background="@android:color/transparent"
+    android:hint="备注"
+    android:gravity="top"
+    android:maxLength="50"
+    android:id="@+id/edit_camera_beizhu"
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="100dp" />
+</LinearLayout>

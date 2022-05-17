@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yj_baise"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shugang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="保单号："
+            android:textColor="#A0A3B1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ifi_tv_proposalNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="#A0A3B1"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:background="#F1F4F7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ifi_tv_insuredName"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="陈百万"
+                android:textColor="#4A5175"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ifi_tv_certificateId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="投保面积（亩）"
+                android:textColor="#9498AB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ifi_tv_sumQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="600.00"
+                android:textColor="@color/main"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/item_right" />
+    </LinearLayout>
+
+</LinearLayout>

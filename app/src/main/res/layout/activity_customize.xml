@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#506DF5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@mipmap/back_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="自定义地块采集"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goHome">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/gohome" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/yj_baisese">
+
+        <com.esri.arcgisruntime.mapping.view.MapView
+            android:id="@+id/customize_mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/yj_baises"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <Button
+                android:visibility="gone"
+                android:id="@+id/customize_btn_esc"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/yj_lanse"
+                android:text="取消修改"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/customize_btn_finish"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/yj_lvse"
+                android:text="完成"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/yj_baise"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/customize_btn_location"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="定位"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="@color/white2" />
+
+            <LinearLayout
+                android:id="@+id/customize_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/customize_btn_location"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="撤销"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="@color/white2" />
+
+            <LinearLayout
+                android:id="@+id/customize_btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/customize_btn_back"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="@color/white2" />
+
+            <LinearLayout
+                android:id="@+id/customize_btn_keep"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/customize_btn_delete"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

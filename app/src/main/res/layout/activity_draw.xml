@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_draw_context"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextureView
+                android:id="@+id/draw_mTextureView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.example.lml.easyphoto.skp.CameraView
+                android:id="@+id/draw_mCameraView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />-->
+<LinearLayout
+    android:gravity="center"
+    android:background="@drawable/shape_login_shurukuang"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="60dp"
+    android:layout_weight="1">
+    <com.example.lml.easyphoto.sign.DrawView
+        android:layout_margin="2dp"
+        android:id="@+id/dc_draw_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+</LinearLayout>
+
+
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:background="@color/white"
+        android:layout_marginTop="48dp"
+        android:id="@+id/draw_iv_sign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ad_btn_reDraw"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanse"
+            android:text="重签"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/ad_btn_counton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_huang"
+            android:text="暂存"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/ad_btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lv"
+            android:text="提交"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@mipmap/back_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="签字"
+            android:textColor="#F7FDFDFD"
+            android:textSize="50px" />
+
+    </LinearLayout>
+</RelativeLayout>

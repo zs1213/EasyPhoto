@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white3"
+    tools:context=".sign.signFinish.SignFinishActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@mipmap/back_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="暂存成功"
+            android:textColor="#F7FDFDFD"
+            android:textSize="50px" />
+
+    </LinearLayout>
+    <ImageView
+        android:scaleType="fitCenter"
+        android:id="@+id/asf_iv_sign"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@drawable/yj_baises"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/asf_btn_counton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lanses"
+            android:text="继续标绘"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/asf_btn_sub"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/yj_lv"
+            android:text="提交"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>

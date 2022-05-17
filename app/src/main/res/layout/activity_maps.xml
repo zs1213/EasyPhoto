@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aits_DDDDDD"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/aits_2485F1" >
+
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/window_icon_size"
+            android:src="@mipmap/titlebar_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="打开工程"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/window_title_size" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_maps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

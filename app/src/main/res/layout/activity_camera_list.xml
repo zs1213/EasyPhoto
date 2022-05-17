@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/aits_2485F1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:onClick="goBack"
+            android:src="@mipmap/titlebar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="文件列表"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_quxiao"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/el_photo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"></ExpandableListView>
+
+    <LinearLayout
+        android:background="#e7e5e5"
+        android:id="@+id/lin_caozuo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lin_share"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/fenxiang" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享" />
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:id="@+id/lin_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="120dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/shanchu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="刪除" />
+        </LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>

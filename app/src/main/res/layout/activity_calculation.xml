@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aits_EEEEEE"
+    android:orientation="vertical"
+    tools:context=".calculation.CalculationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/aits_2485F1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="goBack"
+            android:src="@mipmap/titlebar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="产量测算"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/calculation_tv_yumi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="玉米"
+            android:textColor="@color/aits_000000" />
+
+        <TextView
+            android:id="@+id/calculation_tv_shuidao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="水稻"
+            android:textColor="@color/aits_000000" />
+
+        <TextView
+            android:id="@+id/calculation_tv_dadou"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="大豆"
+            android:textColor="@color/aits_000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/calculation_view_yumi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/aits_2485F1"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/calculation_view_shuidao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/calculation_view_dadou"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/yj_baise"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_area"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="样本面积"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写样本面积" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_area"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_weater"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="含水量"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_weater"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写含水量" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_weater"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_lizl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="取样粒重"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_lizl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写取样粒重" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_lizl"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_zazhi"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="杂质含量"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_zazhi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写杂质含量" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_zazhi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_zhuNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="样本点株数"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_zhuNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写样本点株数" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_zhuNumber"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_suiNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="取样穗数"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_suiNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写取样穗数" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_suiNumber"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/calculation_rel_ybzl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="样本重量"
+                android:textColor="@color/aits_000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/calculation_et_ybzl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|right"
+                android:hint="请填写样本重量" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calculation_view_ybzl"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/aits_EEEEEE" />
+
+        <Button
+            android:id="@+id/calculation_btn_calculation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/yj_lanse"
+            android:text="计算"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:textIsSelectable="true"
+            android:id="@+id/calculation_tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/aits_2485F1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

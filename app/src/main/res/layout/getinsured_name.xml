@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保户信息查询 -->
+<LinearLayout android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout
+		android:background="@color/white"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<ImageView android:background="@drawable/tabbottom"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<LinearLayout android:gravity="center" android:id="@+id/search_liner"
+			android:orientation="horizontal" android:background="@drawable/choosecarsearch"
+			android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<EditText android:id="@+id/accEt" android:background="@drawable/choosecareditback"
+				android:layout_marginLeft="10.0px"  android:layout_width="300.0px"
+				android:layout_height="wrap_content" android:hint="搜索"
+				android:maxLines="10" android:singleLine="true" />
+			<ImageView android:id="@+id/accBtn" android:background="@drawable/selectorchoosecarsearch"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginLeft="10.0px"  android:layout_marginRight="10.0px" />
+		</LinearLayout>
+		<ListView android:id="@+id/accList" android:layout_width="fill_parent"
+			android:fastScrollEnabled="true" android:layout_height="fill_parent"
+			android:cacheColorHint="#00000000"  android:divider="@drawable/linecolor"
+			android:dividerHeight="1.0px" />
+	</LinearLayout>
+</LinearLayout>
+

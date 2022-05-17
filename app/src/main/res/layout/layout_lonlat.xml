@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/lonlat_tv_lon"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="经        度："
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:numeric="decimal"
+            android:id="@+id/lonlat_et_lon"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/lonlat_tv_lon"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请填写经度"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_38"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/lonlat_tv_lat"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:gravity="center|left"
+            android:text="纬        度："
+            android:textColor="@color/aits_444444"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:numeric="decimal"
+            android:id="@+id/lonlat_et_lat"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:layout_toRightOf="@+id/lonlat_tv_lat"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="2"
+            android:hint="请填写纬度"
+            android:textColor="@color/aits_444444"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aits_DDDDDD" />
+
+</LinearLayout>

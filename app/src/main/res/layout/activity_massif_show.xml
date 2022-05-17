@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:onClick="goBack">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/znyg_left" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginRight="48dp"
+            android:id="@+id/ams_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="地块采集"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.esri.arcgisruntime.mapping.view.MapView
+            android:id="@+id/ams_map_mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:background="@drawable/yj_baises"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ams_btn_hoolds"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/yj_lanse"
+                android:text="分户清单"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/ams_btn_sign"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/yj_lanses"
+                android:text="查看签名"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
