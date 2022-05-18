@@ -231,16 +231,17 @@
                 android:src="@mipmap/dz_right" />
         </LinearLayout>
     </LinearLayout>
+
     <Button
-        android:textSize="16sp"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/gismap_btn_sure"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/yj_lanses"
         android:text="确定"
         android:textColor="@color/white"
-        android:background="@drawable/yj_lanses"
-        android:id="@+id/gismap_btn_sure"
-        android:layout_width="80dp"
-        android:layout_height="40dp"/>
+        android:textSize="16sp" />
 </RelativeLayout>

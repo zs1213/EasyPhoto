@@ -6,60 +6,36 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.BitmapDrawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.esri.arcgisruntime.data.ServiceFeatureTable;
-import com.esri.arcgisruntime.geometry.GeometryEngine;
 import com.esri.arcgisruntime.geometry.Point;
 import com.esri.arcgisruntime.geometry.SpatialReferences;
 import com.example.lml.easyphoto.FarmerInfo.FarmerInfoActivity;
 import com.example.lml.easyphoto.R;
-import com.example.lml.easyphoto.addressSelect.AddressPickerView;
-import com.example.lml.easyphoto.addressSelect.AddressSelectBean;
-import com.example.lml.easyphoto.banner.BannerFragment;
-import com.example.lml.easyphoto.calculation.CalculationActivity;
 import com.example.lml.easyphoto.camera.AitsApplication;
 import com.example.lml.easyphoto.camera.PhotoMain;
 import com.example.lml.easyphoto.camera.offline.OfflineActivity;
 import com.example.lml.easyphoto.customize.CustomizeAddressActivity;
 import com.example.lml.easyphoto.dikuai.DKService;
-import com.example.lml.easyphoto.dikuai.DiKuaiActivity;
-import com.example.lml.easyphoto.down.DownActivity;
 import com.example.lml.easyphoto.gismapSelect.GismapSelectActivity;
 import com.example.lml.easyphoto.history.HistoryActivity;
-import com.example.lml.easyphoto.login.LoginActivity;
-import com.example.lml.easyphoto.skp.Config;
 import com.example.lml.easyphoto.util.Configure;
 import com.example.lml.easyphoto.util.SearchService;
 import com.example.lml.easyphoto.util.SharePreferencesTools;
 
 import java.io.File;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -264,7 +240,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                         countyName = (String) dataMap.get("county");
                         countryName = (String) dataMap.get("town");
                         villageName = (String) dataMap.get("village");
-                        village= (String) dataMap.get("xzdm");
+                        village = (String) dataMap.get("xzdm");
 //                        DecimalFormat df = new DecimalFormat("0");
 //                        village = df.format(dos);
 //                    DecimalFormat df = new DecimalFormat("0");
@@ -290,14 +266,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 Intent intent_cb = new Intent(MenuActivity.this, FarmerInfoActivity.class);
                 intent_cb.putExtra("province", province);
                 intent_cb.putExtra("provinceName", provinceName);
-                intent_cb.putExtra( "city",city);
-                intent_cb.putExtra("cityName",cityName);
-                intent_cb.putExtra("county",county);
-                intent_cb.putExtra("countyName",countyName);
-                intent_cb.putExtra("country",country);
-                intent_cb.putExtra("countryName",countryName);
-                intent_cb.putExtra("village",village);
-                intent_cb.putExtra("villageName",villageName);
+                intent_cb.putExtra("city", city);
+                intent_cb.putExtra("cityName", cityName);
+                intent_cb.putExtra("county", county);
+                intent_cb.putExtra("countyName", countyName);
+                intent_cb.putExtra("country", country);
+                intent_cb.putExtra("countryName", countryName);
+                intent_cb.putExtra("village", village);
+                intent_cb.putExtra("villageName", villageName);
 //                intent_cb.putExtra("city", "");
 //                intent_cb.putExtra("cityName", "");
 //                intent_cb.putExtra("county", "");
@@ -312,14 +288,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 Intent intent_customize = new Intent(MenuActivity.this, CustomizeAddressActivity.class);
                 intent_customize.putExtra("provinceCode", province);
                 intent_customize.putExtra("provinceName", provinceName);
-                intent_customize.putExtra( "cityCode",city);
-                intent_customize.putExtra("cityName",cityName);
-                intent_customize.putExtra("countyCode",county);
-                intent_customize.putExtra("countyName",countyName);
-                intent_customize.putExtra("countryCode",country);
-                intent_customize.putExtra("countryName",countryName);
-                intent_customize.putExtra("villageCode",village);
-                intent_customize.putExtra("villageName",villageName);
+                intent_customize.putExtra("cityCode", city);
+                intent_customize.putExtra("cityName", cityName);
+                intent_customize.putExtra("countyCode", county);
+                intent_customize.putExtra("countyName", countyName);
+                intent_customize.putExtra("countryCode", country);
+                intent_customize.putExtra("countryName", countryName);
+                intent_customize.putExtra("villageCode", village);
+                intent_customize.putExtra("villageName", villageName);
                 startActivity(intent_customize);
                 break;
             case R.id.menu_lin_history:
@@ -331,44 +307,44 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 String serverPaths = SharePreferencesTools.getValue(MenuActivity.this, "easyPhoto", "offlineServerPath", "");
                 if (!serverPaths.equals("")) {
                     File file = new File(serverPaths);
-                    if (file.exists()){
+                    if (file.exists()) {
                         Intent intent = new Intent(MenuActivity.this, OfflineActivity.class);
                         startActivity(intent);
-                    }else {
-                        if (path!=null&&path.length>0){
+                    } else {
+                        if (path != null && path.length > 0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
                             builder.setTitle("底图选择");
                             builder.setCancelable(true);
                             builder.setItems(path, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/easyPhoto/backgroundmap/"+path[which];
+                                    String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/easyPhoto/backgroundmap/" + path[which];
                                     SharePreferencesTools.saveString(MenuActivity.this, "easyPhoto", "offlineServerPath", filePath);
                                     Intent intent = new Intent(MenuActivity.this, OfflineActivity.class);
                                     startActivity(intent);
                                 }
                             });
                             builder.create().show();
-                        }else {
+                        } else {
                             Toast.makeText(this, "没有底图", Toast.LENGTH_SHORT).show();
                         }
                     }
                 } else {
-                    if (path!=null&&path.length>0){
+                    if (path != null && path.length > 0) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
                         builder.setTitle("底图选择");
                         builder.setCancelable(true);
                         builder.setItems(path, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/easyPhoto/backgroundmap/"+path[which];
+                                String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/easyPhoto/backgroundmap/" + path[which];
                                 SharePreferencesTools.saveString(MenuActivity.this, "easyPhoto", "offlineServerPath", filePath);
                                 Intent intent = new Intent(MenuActivity.this, OfflineActivity.class);
                                 startActivity(intent);
                             }
                         });
                         builder.create().show();
-                    }else {
+                    } else {
                         Toast.makeText(this, "没有底图", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -376,7 +352,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             case R.id.menu_lin_data:
                 String gisCode = SharePreferencesTools.getValue(MenuActivity.this, "easyPhoto", "gisCode", "");
                 String serverPath = SharePreferencesTools.getValue(MenuActivity.this, "easyPhoto", "serverPath", "");
-                if (!gisCode.equals("")&&!serverPath.equals("")){
+                if (!gisCode.equals("") && !serverPath.equals("")) {
                     String provinceNameCk = SharePreferencesTools.getValue(MenuActivity.this, "easyPhoto", "provinceNameCk", "");
                     String provinceCodeCk = SharePreferencesTools.getValue(MenuActivity.this, "easyPhoto", "provinceCodeCk", "");
                     String cityNameCk = SharePreferencesTools.getValue(MenuActivity.this, "easyPhoto", "cityNameCk", "");
@@ -391,27 +367,27 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                     Intent intent = new Intent(MenuActivity.this, PhotoMain.class);
                     intent.putExtra("provinceCode", provinceCodeCk);
                     intent.putExtra("provinceName", provinceNameCk);
-                    intent.putExtra("cityCode",cityCodeCk);
-                    intent.putExtra("cityName",cityNameCk);
-                    intent.putExtra("countyCode",countyCodeCk);
-                    intent.putExtra("countyName",countyNameCk);
-                    intent.putExtra("countryCode",countryCodeCk);
-                    intent.putExtra("countryName",countryNameCk);
-                    intent.putExtra("villageCode",villageCodeCk);
-                    intent.putExtra("villageName",villageNameCk);
+                    intent.putExtra("cityCode", cityCodeCk);
+                    intent.putExtra("cityName", cityNameCk);
+                    intent.putExtra("countyCode", countyCodeCk);
+                    intent.putExtra("countyName", countyNameCk);
+                    intent.putExtra("countryCode", countryCodeCk);
+                    intent.putExtra("countryName", countryNameCk);
+                    intent.putExtra("villageCode", villageCodeCk);
+                    intent.putExtra("villageName", villageNameCk);
                     startActivity(intent);
-                }else {
+                } else {
                     Intent intent_data = new Intent(MenuActivity.this, GismapSelectActivity.class);
                     intent_data.putExtra("provinceCode", province);
                     intent_data.putExtra("provinceName", provinceName);
-                    intent_data.putExtra( "cityCode",city);
-                    intent_data.putExtra("cityName",cityName);
-                    intent_data.putExtra("countyCode",county);
-                    intent_data.putExtra("countyName",countyName);
-                    intent_data.putExtra("countryCode",country);
-                    intent_data.putExtra("countryName",countryName);
-                    intent_data.putExtra("villageCode",village);
-                    intent_data.putExtra("villageName",villageName);
+                    intent_data.putExtra("cityCode", city);
+                    intent_data.putExtra("cityName", cityName);
+                    intent_data.putExtra("countyCode", county);
+                    intent_data.putExtra("countyName", countyName);
+                    intent_data.putExtra("countryCode", country);
+                    intent_data.putExtra("countryName", countryName);
+                    intent_data.putExtra("villageCode", village);
+                    intent_data.putExtra("villageName", villageName);
                     startActivity(intent_data);
                 }
 
@@ -420,6 +396,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 break;
         }
     }
+
     //获取底图路径
     private String[] getFileName() {
         String[] paths = null;
@@ -436,6 +413,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         }
         return paths;
     }
+
     @Override
     protected void onResume() {
         super.onResume();

@@ -235,7 +235,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:text="自定义标绘"
+                android:text="精确承保"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 

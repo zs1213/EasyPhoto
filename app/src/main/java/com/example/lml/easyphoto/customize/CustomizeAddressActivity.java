@@ -2,32 +2,19 @@ package com.example.lml.easyphoto.customize;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lml.easyphoto.FarmerInfo.FarmerInfoAdapter;
-import com.example.lml.easyphoto.FarmerInfo.FarmerInfoBean;
-import com.example.lml.easyphoto.FarmerInfo.houseHolds.HoldsService;
-import com.example.lml.easyphoto.FarmerInfo.houseHolds.HouseHoldsActivity;
-import com.example.lml.easyphoto.FarmerInfo.houseHolds.HouseHoldsBean;
 import com.example.lml.easyphoto.R;
 import com.example.lml.easyphoto.addressSelect.AddressSelectBean;
-import com.example.lml.easyphoto.camera.PhotoMain;
-import com.example.lml.easyphoto.dikuai.DKBean;
-import com.example.lml.easyphoto.dikuai.DKService;
-import com.example.lml.easyphoto.dikuai.DiKuaiActivity;
+import com.example.lml.easyphoto.gismapSelect.GismapSelectActivity;
 import com.example.lml.easyphoto.main.MenuActivity;
 import com.example.lml.easyphoto.okHttpUtils.DOkHttp;
 import com.example.lml.easyphoto.util.Configure;
@@ -47,13 +34,12 @@ import java.util.Map;
 
 import okhttp3.FormBody;
 import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 
 public class CustomizeAddressActivity extends Activity implements View.OnClickListener {
-    private TextView tv_city, tv_county, tv_country, tv_village;
-    private LinearLayout lin_province,lin_city, lin_county, lin_country, lin_village;
+    private TextView tv_province, tv_city, tv_county, tv_country, tv_village;
+    private LinearLayout lin_provinces, lin_city, lin_county, lin_country, lin_village;
     private String provinceCode;
     private String provinceName;
     private String cityCode;
@@ -64,10 +50,12 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
     private String countryName;
     private String villageCode;
     private String villageName;
+    private List<AddressSelectBean> provinceList;
     private List<AddressSelectBean> cityList;
     private List<AddressSelectBean> countyList;
     private List<AddressSelectBean> countryList;
     private List<AddressSelectBean> villageList;
+    private String provinceStr[];
     private String cityStr[];
     private String countyStr[];
     private String countryStr[];
@@ -76,6 +64,9 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
     private Gson gson;
     private LoadingDialog dialog;//提示框
     private Button btn_sure;
+    private String provinceCodeSp;
+    private String provinceNameSp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,23 +77,27 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
 
 
     private void initView() {
+        tv_province = findViewById(R.id.gismap_tv_province);
         tv_city = findViewById(R.id.gismap_tv_city);
         tv_county = findViewById(R.id.gismap_tv_county);
         tv_country = findViewById(R.id.gismap_tv_town);
         tv_village = findViewById(R.id.gismap_tv_village);
-        lin_province = findViewById(R.id.gismap_lin_province);
+        lin_provinces = findViewById(R.id.gismap_lin_province);
         lin_city = findViewById(R.id.gismap_lin_city);
         lin_county = findViewById(R.id.gismap_lin_county);
         lin_country = findViewById(R.id.gismap_lin_town);
         lin_village = findViewById(R.id.gismap_lin_village);
         btn_sure = findViewById(R.id.gismap_btn_sure);
+        lin_provinces.setOnClickListener(this);
         lin_city.setOnClickListener(this);
         lin_county.setOnClickListener(this);
         lin_country.setOnClickListener(this);
         lin_village.setOnClickListener(this);
         btn_sure.setOnClickListener(this);
-        lin_province.setVisibility(View.GONE);
-        findViewById(R.id.gismap_view_province).setVisibility(View.GONE);
+        lin_provinces.setVisibility(View.VISIBLE);
+//        findViewById(R.id.gismap_view_province).setVisibility(View.GONE);
+        provinceCodeSp = SharePreferencesTools.getValue(CustomizeAddressActivity.this, "easyPhoto", "province", "");
+        provinceNameSp = SharePreferencesTools.getValue(CustomizeAddressActivity.this, "easyPhoto", "provinceName", "");
         String city = SharePreferencesTools.getValue(CustomizeAddressActivity.this, "easyPhoto", "city", "");
         String county = SharePreferencesTools.getValue(CustomizeAddressActivity.this, "easyPhoto", "county", "");
         String country = SharePreferencesTools.getValue(CustomizeAddressActivity.this, "easyPhoto", "country", "");
@@ -132,16 +127,35 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
         countryName = getIntent().getStringExtra("countryName");
         villageCode = getIntent().getStringExtra("villageCode");
         villageName = getIntent().getStringExtra("villageName");
+        tv_province.setText(provinceName);
         tv_city.setText(cityName);
         tv_county.setText(countyName);
         tv_country.setText(countryName);
         tv_village.setText(villageName);
         gson = new Gson();
         dialog = new LoadingDialog(this);
+        provinceList = new ArrayList<>();
         cityList = new ArrayList<>();
         countyList = new ArrayList<>();
         countryList = new ArrayList<>();
         villageList = new ArrayList<>();
+        if (provinceCode.equals(provinceCodeSp)){
+            provinceStr = new String[]{provinceName};
+            AddressSelectBean bean = new AddressSelectBean();
+            bean.setAreaCode(provinceCode);
+            bean.setAreaName(provinceName);
+            provinceList.add(bean);
+        }else {
+            provinceStr = new String[]{provinceName,provinceNameSp};
+            AddressSelectBean bean = new AddressSelectBean();
+            bean.setAreaCode(provinceCode);
+            bean.setAreaName(provinceName);
+            AddressSelectBean bean1 = new AddressSelectBean();
+            bean1.setAreaCode(provinceCodeSp);
+            bean1.setAreaName(provinceNameSp);
+            provinceList.add(bean);
+            provinceList.add(bean1);
+        }
         if (cityCode.equals("")) {
             getXzquData(Configure.cityInfo + "?provinceCode=" + provinceCode, 2);
         }
@@ -154,6 +168,43 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.gismap_lin_province:
+                AlertDialog.Builder builders = new AlertDialog.Builder(CustomizeAddressActivity.this);
+                builders.setItems(provinceStr, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        AddressSelectBean bean = provinceList.get(which);
+                        if (!bean.getAreaName().equals(tv_province.getText().toString())) {
+                            provinceName = bean.getAreaName();
+                            provinceCode = bean.getAreaCode();
+                            tv_province.setText(provinceName);
+                            cityList.clear();
+                            countyList.clear();
+                            countryList.clear();
+                            villageList.clear();
+                            cityStr = null;
+                            countyStr = null;
+                            countryStr = null;
+                            villageStr = null;
+                            tv_city.setText("");
+                            tv_county.setText("");
+                            tv_country.setText("");
+                            tv_village.setText("");
+                            cityCode = "";
+                            countyCode = "";
+                            countryCode = "";
+                            villageCode = "";
+                            cityName = "";
+                            countyName = "";
+                            countryName = "";
+                            villageName = "";
+                            getXzquData(Configure.cityInfo + "?provinceCode=" + provinceCode, 2);
+                        }
+                        dialog.dismiss();
+                    }
+                });
+                builders.create().show();
+                break;
             case R.id.gismap_lin_city:
                 if (cityList.size() > 0 && cityStr != null && cityStr.length > 0) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(CustomizeAddressActivity.this);
@@ -268,7 +319,7 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
                 }
                 break;
             case R.id.gismap_btn_sure:
-                if (villageCode==null||villageCode.equals("")){
+                if (villageCode == null || villageCode.equals("")) {
                     Toast.makeText(this, "请选择村", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -644,6 +695,7 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
             }
         });
     }
+
     private void getMapServerPath() {
         LoadingDialog.Builder loadBuilder = new LoadingDialog.Builder(CustomizeAddressActivity.this)
                 .setMessage("正在请求数据")
@@ -655,7 +707,7 @@ public class CustomizeAddressActivity extends Activity implements View.OnClickLi
         map.put("provinceName", provinceName);
         map.put("cityName", cityName);
         map.put("countyName", "");
-        map.put("yearNum", "2021");
+        map.put("yearNum", "2022");
         RequestBody requestBodys = FormBody.create(MediaType.parse("application/json; charset=utf-8"), gson.toJson(map));
         DOkHttp.getInstance().uploadPost2ServerProgress(CustomizeAddressActivity.this, Configure.getMapServicePath, "Bearer " + SharePreferencesTools.getValue(CustomizeAddressActivity.this, "easyPhoto", "access_token", ""), requestBodys, new DOkHttp.MyCallBack() {
             @Override
