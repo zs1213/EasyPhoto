@@ -1277,9 +1277,11 @@ public class CustomizeActivity extends AppCompatActivity implements View.OnClick
         LayoutInflater inflater = LayoutInflater.from(CustomizeActivity.this);
         View layout = inflater.inflate(R.layout.layout_keep, null);
         final EditText et_crop = layout.findViewById(R.id.keep_et_crop);
+        final EditText et_insuredarea = layout.findViewById(R.id.keep_et_insuredarea);
         final EditText et_userName = layout.findViewById(R.id.keep_et_userName);
         final EditText et_dkName = layout.findViewById(R.id.keep_et_dkName);
         final EditText et_cardNumber = layout.findViewById(R.id.keep_et_cardNumber);
+        final EditText et_unitpremium = layout.findViewById(R.id.keep_et_unitpremium);
         final EditText et_hezuoshe = layout.findViewById(R.id.keep_et_hezuoshe);
         final EditText et_remarks = layout.findViewById(R.id.keep_et_remarks);
         if (!taskIdOld.equals("")){
